@@ -29,10 +29,13 @@ const counter = useCounterStore();
   </div>
   <!-- <HelloWorld msg="Vite + Vue + TS" /> -->
   <HelloWorldPinia msg="Vite + Vue + Pinia + TS" />
-  <br>
+
   <button @click="counter.decrement">Decrement</button>
-  &nbsp; &nbsp; 
+  &nbsp; &nbsp;
   <button @click="counter.reset">Reset</button>
+  <p>
+  <h1>{{ counter.count }}</h1>
+  </p>
 </template>
 
 <style scoped>
@@ -50,9 +53,11 @@ const counter = useCounterStore();
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
 .logo.pinia:hover {
   filter: drop-shadow(0 0 2em #e6e34faa);
 }
+
 .logo.ts:hover {
   filter: drop-shadow(0 0 2em #397ac4aa);
 }
